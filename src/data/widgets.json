@@ -1,0 +1,26 @@
+[
+  {
+    "id": "widget1",
+    "title": "Google Slide",
+    "description": "A Google Slide integration",
+    "component": "GoogleSlide"
+  },
+  {
+    "id": "widget2",
+    "title": "Pomodoro Timer",
+    "description": "A Pomodoro Timer",
+    "component": "PomodoroTimer"
+  },
+  {
+    "id": "widget3",
+    "title": "Google Docs",
+    "description": "A Google Docs integration",
+    "component": "GoogleDocs"
+  },
+  {
+    "id": "widget4",
+    "title": "Google Keep",
+    "description": "A Google Keep integration",
+    "component": "GoogleKeep"
+  }
+]

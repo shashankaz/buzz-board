@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "title": "New Feature Released",
+    "content": "We are excited to announce the release of our new feature that enhances user experience. Check it out now!",
+    "date": "2024-07-21",
+    "author": "Admin"
+  },
+  {
+    "id": 2,
+    "title": "Scheduled Maintenance",
+    "content": "Our servers will undergo scheduled maintenance on 2024-07-25 from 00:00 to 04:00 UTC. During this time, the service may be unavailable.",
+    "date": "2024-07-20",
+    "author": "IT Team"
+  },
+  {
+    "id": 3,
+    "title": "Holiday Notice",
+    "content": "Please be informed that our office will be closed on 2024-07-30 for a public holiday. Normal operations will resume the next day.",
+    "date": "2024-07-18",
+    "author": "HR Department"
+  },
+  {
+    "id": 4,
+    "title": "Quarterly Meeting",
+    "content": "The quarterly meeting is scheduled for 2024-08-01 at 10:00 AM in the main conference room. All employees are required to attend.",
+    "date": "2024-07-15",
+    "author": "Management"
+  },
+  {
+    "id": 5,
+    "title": "COVID-19 Guidelines Update",
+    "content": "In light of recent updates, please adhere to the new COVID-19 guidelines. Masks and social distancing are mandatory in all office premises.",
+    "date": "2024-07-10",
+    "author": "Health and Safety Committee"
+  }
+]
