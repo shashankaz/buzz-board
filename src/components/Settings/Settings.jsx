@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import widgets from "../../data/widgets.json";
 import styles from "./Settings.module.css";
+import { ToggleContext } from "../../context/ToggleContext";
 
 const Settings = ({ handleClose }) => {
+  const { cards, hideCard, showCard } = useContext(ToggleContext);
+
+  const handleToggle = (id) => {
+    if (cards[id]) {
+      hideCard(id);
+    } else {
+      showCard(id);
+    }
+  };
+
   return (
     <div className={styles.overlay}>
       <div className={styles.modal}>
@@ -20,7 +31,12 @@ const Settings = ({ handleClose }) => {
                 <label>
                   {widget.title}
                   <div className={styles.checkboxWrapper}>
-                    <input type="checkbox" className={styles.ikxBAC} />
+                    <input
+                      className={styles.ikxBAC}
+                      type="checkbox"
+                      checked={cards[widget.id]}
+                      onChange={() => handleToggle(widget.id)}
+                    />
                   </div>
                 </label>
               </li>

@@ -1,13 +1,21 @@
-import React, { useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { CiMenuKebab } from "react-icons/ci";
 import { FaEyeSlash } from "react-icons/fa";
 import Model from "../Model/Model";
 import styles from "./Card.module.css";
+import { ToggleContext } from "../../context/ToggleContext";
 
-const Card = ({ title, description }) => {
+const Card = ({ id, title, description }) => {
+  const { cards, hideCard, showCard } = useContext(ToggleContext);
+
   const [options, setOptions] = useState(false);
-  const [active, setActive] = useState(true);
   const [model, setModel] = useState(false);
+
+  useEffect(() => {
+    if (cards[id] === undefined) {
+      showCard(id); 
+    }
+  }, [cards, id, showCard]);
 
   const handleOpenSettings = () => {
     setModel(true);
@@ -17,13 +25,9 @@ const Card = ({ title, description }) => {
     setModel(false);
   };
 
-  const hideCard = () => {
-    setActive(false);
-  };
-
   return (
     <div>
-      {active && (
+      {cards[id] && (
         <div className={styles.card}>
           <div className={styles.header}>
             <div className={styles.title}>
@@ -34,7 +38,7 @@ const Card = ({ title, description }) => {
               <CiMenuKebab onClick={() => setOptions(!options)} />
               {options && (
                 <div className={styles.options}>
-                  <p onClick={hideCard}>
+                  <p onClick={() => hideCard(id)}>
                     <FaEyeSlash />
                     Hide
                   </p>
