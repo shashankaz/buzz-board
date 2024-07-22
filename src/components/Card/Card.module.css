@@ -1,6 +1,7 @@
 .card {
   display: flex;
   flex-direction: column;
+  width: 25rem;
 }
 
 .header {
@@ -14,7 +15,7 @@ h1 {
 }
 
 p {
-  font-size: 1rem;
+  font-size: 0.85rem;
   margin-top: 0.25rem;
 }
 

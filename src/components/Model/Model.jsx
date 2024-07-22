@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Model.module.css";
 
-const Model = ({ handleClose, title }) => {
+const Model = ({ handleClose, title, Component }) => {
   return (
     <div className={styles.overlay}>
       <div className={styles.modal}>
@@ -12,7 +12,7 @@ const Model = ({ handleClose, title }) => {
           </button>
         </div>
         <div className={styles.body}>
-          <h3>Coming Soon!!</h3>
+          <Component />
         </div>
       </div>
     </div>

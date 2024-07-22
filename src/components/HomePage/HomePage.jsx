@@ -12,7 +12,7 @@ const HomePage = () => {
         {widgets.map((widget) => (
           <Card
             key={widget.id}
-            id={widget.id} // Pass the id to the Card component
+            id={widget.id}
             title={widget.title}
             description={widget.description}
           />

@@ -1,26 +1,62 @@
 [
   {
-    "id": "widget1",
+    "id": "1",
     "title": "Google Slide",
-    "description": "A Google Slide integration",
-    "component": "GoogleSlide"
+    "description": "Craft stunning presentations and collaborate in real-time."
   },
   {
-    "id": "widget2",
+    "id": "2",
     "title": "Pomodoro Timer",
-    "description": "A Pomodoro Timer",
-    "component": "PomodoroTimer"
+    "description": "Boost your productivity with the Pomodoro timer."
   },
   {
-    "id": "widget3",
-    "title": "Google Docs",
-    "description": "A Google Docs integration",
-    "component": "GoogleDocs"
+    "id": "3",
+    "title": "Google Spreadsheet",
+    "description": "Create, edit, and share spreadsheets online with ease."
   },
   {
-    "id": "widget4",
+    "id": "4",
+    "title": "Google Form",
+    "description": "Effortlessly create surveys and collect responses in no time."
+  },
+  {
+    "id": "5",
+    "title": "Music",
+    "description": "Stream your favorite tunes and discover new music."
+  },
+  {
+    "id": "6",
+    "title": "Polls",
+    "description": "Engage your audience with quick and interactive polls."
+  },
+  {
+    "id": "7",
+    "title": "Issue Tracker",
+    "description": "Stay on top of your projects by tracking issues and tasks."
+  },
+  {
+    "id": "8",
+    "title": "DGC - Daily Growth Checklist",
+    "description": "Stay motivated and track your daily progress and growth."
+  },
+  {
+    "id": "9",
+    "title": "Opportunity Board",
+    "description": "Explore and seize new opportunities for growth and success."
+  },
+  {
+    "id": "10",
+    "title": "Google Meet",
+    "description": "Connect face-to-face with high-quality video meetings."
+  },
+  {
+    "id": "11",
     "title": "Google Keep",
-    "description": "A Google Keep integration",
-    "component": "GoogleKeep"
+    "description": "Capture your thoughts and stay organized with notes and lists."
+  },
+  {
+    "id": "12",
+    "title": "ChatGPT",
+    "description": "Get instant answers and engage in conversations with AI."
   }
 ]

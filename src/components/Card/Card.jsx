@@ -4,6 +4,7 @@ import { FaEyeSlash } from "react-icons/fa";
 import Model from "../Model/Model";
 import styles from "./Card.module.css";
 import { ToggleContext } from "../../context/ToggleContext";
+import componentMapping from "../../utils/componentMapping";
 
 const Card = ({ id, title, description }) => {
   const { cards, hideCard, showCard } = useContext(ToggleContext);
@@ -13,7 +14,7 @@ const Card = ({ id, title, description }) => {
 
   useEffect(() => {
     if (cards[id] === undefined) {
-      showCard(id); 
+      showCard(id);
     }
   }, [cards, id, showCard]);
 
@@ -25,6 +26,8 @@ const Card = ({ id, title, description }) => {
     setModel(false);
   };
 
+  const ComponentToRender = componentMapping[title] || null;
+
   return (
     <div>
       {cards[id] && (
@@ -32,7 +35,7 @@ const Card = ({ id, title, description }) => {
           <div className={styles.header}>
             <div className={styles.title}>
               <h1>{title}</h1>
-              <p>{description}</p>
+              {/* <p>{description}</p> */}
             </div>
             <div className={styles.option}>
               <CiMenuKebab onClick={() => setOptions(!options)} />
@@ -47,11 +50,17 @@ const Card = ({ id, title, description }) => {
             </div>
           </div>
           <div className={styles.img} onClick={handleOpenSettings}></div>
-          {model && <Model handleClose={handleCloseSettings} title={title} />}
+          {model && (
+            <Model
+              handleClose={handleCloseSettings}
+              title={title}
+              Component={ComponentToRender}
+            />
+          )}
         </div>
       )}
     </div>
-  );
+  );  
 };
 
 export default Card;
