@@ -2,61 +2,61 @@
   {
     "id": "1",
     "title": "Google Slide",
-    "description": "Craft stunning presentations and collaborate in real-time."
+    "description": "Craft stunning presentations and collaborate in real-time.",
+    "img": "1.png"
   },
   {
     "id": "2",
     "title": "Pomodoro Timer",
-    "description": "Boost your productivity with the Pomodoro timer."
+    "description": "Boost your productivity with the Pomodoro timer.",
+    "img": "2.png"
   },
   {
     "id": "3",
     "title": "Google Spreadsheet",
-    "description": "Create, edit, and share spreadsheets online with ease."
+    "description": "Create, edit, and share spreadsheets online with ease.",
+    "img": "3.png"
   },
   {
     "id": "4",
     "title": "Google Form",
-    "description": "Effortlessly create surveys and collect responses in no time."
+    "description": "Effortlessly create surveys and collect responses in no time.",
+    "img": "4.png"
   },
   {
     "id": "5",
     "title": "Music",
-    "description": "Stream your favorite tunes and discover new music."
+    "description": "Stream your favorite tunes and discover new music.",
+    "img": "5.png"
   },
   {
     "id": "6",
     "title": "Polls",
-    "description": "Engage your audience with quick and interactive polls."
+    "description": "Engage your audience with quick and interactive polls.",
+    "img": "6.png"
   },
   {
     "id": "7",
     "title": "Issue Tracker",
-    "description": "Stay on top of your projects by tracking issues and tasks."
+    "description": "Stay on top of your projects by tracking issues and tasks.",
+    "img": "7.png"
   },
   {
     "id": "8",
     "title": "DGC - Daily Growth Checklist",
-    "description": "Stay motivated and track your daily progress and growth."
+    "description": "Stay motivated and track your daily progress and growth.",
+    "img": "8.png"
   },
   {
     "id": "9",
     "title": "Opportunity Board",
-    "description": "Explore and seize new opportunities for growth and success."
+    "description": "Explore and seize new opportunities for growth and success.",
+    "img": "9.png"
   },
   {
     "id": "10",
-    "title": "Google Meet",
-    "description": "Connect face-to-face with high-quality video meetings."
-  },
-  {
-    "id": "11",
-    "title": "Google Keep",
-    "description": "Capture your thoughts and stay organized with notes and lists."
-  },
-  {
-    "id": "12",
     "title": "ChatGPT",
-    "description": "Get instant answers and engage in conversations with AI."
+    "description": "Get instant answers and engage in conversations with AI.",
+    "img": "10.png"
   }
 ]

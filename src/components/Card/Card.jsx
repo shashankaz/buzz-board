@@ -6,11 +6,19 @@ import styles from "./Card.module.css";
 import { ToggleContext } from "../../context/ToggleContext";
 import componentMapping from "../../utils/componentMapping";
 
-const Card = ({ id, title, description }) => {
+const Card = ({ id, title, img }) => {
   const { cards, hideCard, showCard } = useContext(ToggleContext);
 
   const [options, setOptions] = useState(false);
   const [model, setModel] = useState(false);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     if (cards[id] === undefined) {
@@ -35,10 +43,9 @@ const Card = ({ id, title, description }) => {
           <div className={styles.header}>
             <div className={styles.title}>
               <h1>{title}</h1>
-              {/* <p>{description}</p> */}
             </div>
             <div className={styles.option}>
-              <CiMenuKebab onClick={() => setOptions(!options)} />
+              {/* <CiMenuKebab onClick={() => setOptions(!options)} /> */}
               {options && (
                 <div className={styles.options}>
                   <p onClick={() => hideCard(id)}>
@@ -49,7 +56,13 @@ const Card = ({ id, title, description }) => {
               )}
             </div>
           </div>
-          <div className={styles.img} onClick={handleOpenSettings}></div>
+          {loading ? (
+            <ImgSkleton />
+          ) : (
+            <div className={styles.img} onClick={handleOpenSettings}>
+              <img src={img} alt="" />
+            </div>
+          )}
           {model && (
             <Model
               handleClose={handleCloseSettings}
@@ -60,7 +73,15 @@ const Card = ({ id, title, description }) => {
         </div>
       )}
     </div>
-  );  
+  );
 };
 
 export default Card;
+
+const ImgSkleton = () => {
+  return (
+    <div className={styles.img}>
+      <div className={styles.skleton}></div>
+    </div>
+  );
+};

@@ -104,9 +104,9 @@ const SidePane = () => {
           <IoMdSettings onClick={handleOpenSettings} />
           {showSettings && <Settings handleClose={handleCloseSettings} />}
         </div>
-        <div onClick={toggleTheme}>
+        {/* <div onClick={toggleTheme}>
           {theme ? <IoMdFlashlight /> : <IoMdMoon />}
-        </div>
+        </div> */}
       </div>
     </div>
   );

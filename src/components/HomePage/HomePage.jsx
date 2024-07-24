@@ -15,6 +15,7 @@ const HomePage = () => {
             id={widget.id}
             title={widget.title}
             description={widget.description}
+            img={widget.img}
           />
         ))}
       </div>

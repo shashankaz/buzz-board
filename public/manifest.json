@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Digital Notice Board",
+  "name": "Buzz Board",
   "version": "1.0",
   "description": "A digital notice board with Google Slide integration and Pomodoro Timer.",
   "permissions": ["activeTab", "topSites"],
@@ -13,9 +13,8 @@
   "action": {
     "default_popup": "index.html",
     "default_icon": {
-      "16": "icons/icon16.png",
-      "48": "icons/icon48.png",
-      "128": "icons/icon128.png"
+      "192": "icons/icon192.png",
+      "512": "icons/icon512.png"
     }
   }
 }

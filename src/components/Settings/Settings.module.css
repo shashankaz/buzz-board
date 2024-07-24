@@ -13,16 +13,26 @@
 
 .modal {
   background: #17191e;
-  padding: 20px;
+  padding: 0 20px 20px;
   border-radius: 10px;
   width: 500px;
+  height: 400px;
+  overflow-y: auto;
+}
+
+::-webkit-scrollbar{
+  width: 0px;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  padding: 20px 0;
+  position: fixed;
+  width: 460px;
+  background: #17191e;
+  z-index: 1000;
 }
 
 .header h2 {
@@ -40,6 +50,7 @@
 
 .body {
   text-align: left;
+  padding-top: 80px;
 }
 
 .body h3 {

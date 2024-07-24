@@ -7,8 +7,6 @@ import Polls from "../components/Widgets/Polls/Polls";
 import IssueTracker from "../components/Widgets/IssueTracker/IssueTracker";
 import DGC from "../components/Widgets/DGC/DGC";
 import OpportunityBoard from "../components/Widgets/OpportunityBoard/OpportunityBoard";
-import GoogleMeet from "../components/Widgets/GoogleMeet/GoogleMeet";
-import GoogleKeep from "../components/Widgets/GoogleKeep/GoogleKeep";
 import ChatGPT from "../components/Widgets/ChatGPT/ChatGPT";
 
 const componentMapping = {
@@ -21,8 +19,6 @@ const componentMapping = {
   "Issue Tracker": IssueTracker,
   "DGC - Daily Growth Checklist": DGC,
   "Opportunity Board": OpportunityBoard,
-  "Google Meet": GoogleMeet,
-  "Google Keep": GoogleKeep,
   "ChatGPT": ChatGPT,
 };
 

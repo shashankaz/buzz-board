@@ -4,6 +4,8 @@
   align-items: center;
   width: 100%;
   padding-top: 20px;
+  max-height: 350px;
+  overflow-y: auto;
 }
 
 .inputBox {
@@ -23,14 +25,14 @@
 .inputBox button {
   padding: 10px 20px;
   border: none;
-  background-color: #007bff;
+  background-color: #4caf50;
   color: white;
   border-radius: 0 4px 4px 0;
   cursor: pointer;
 }
 
 .inputBox button:hover {
-  background-color: #0056b3;
+  background-color: #45a049;
 }
 
 .tasks {
@@ -49,7 +51,7 @@
   background-color: #f9f9f9;
 }
 
-.task span{
+.task span {
   color: #000;
 }
 
