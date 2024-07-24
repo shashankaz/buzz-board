@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./Music.module.css";
+import { ToggleContext } from "../../../context/ToggleContext";
 
 const Music = () => {
+  const { spotify } = useContext(ToggleContext);
+
   return (
     <div className={styles.container}>
       <iframe
-        src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M"
+        src={spotify}
         className={styles.iframe}
         allow="encrypted-media"
         title="Spotify Playlist"

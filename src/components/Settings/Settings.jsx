@@ -4,7 +4,8 @@ import styles from "./Settings.module.css";
 import { ToggleContext } from "../../context/ToggleContext";
 
 const Settings = ({ handleClose }) => {
-  const { cards, hideCard, showCard } = useContext(ToggleContext);
+  const { cards, hideCard, showCard, spotify, setSpotifyUrl } =
+    useContext(ToggleContext);
 
   const handleToggle = (id) => {
     if (cards[id]) {
@@ -12,6 +13,10 @@ const Settings = ({ handleClose }) => {
     } else {
       showCard(id);
     }
+  };
+
+  const handleSpotify = (e) => {
+    setSpotifyUrl(e.target.value);
   };
 
   return (
@@ -42,6 +47,13 @@ const Settings = ({ handleClose }) => {
               </li>
             ))}
           </ul>
+          <h3>Manage Spotify Playlist</h3>
+          <input
+            type="text"
+            placeholder="Your Sporify Playlist Url"
+            value={spotify}
+            onChange={handleSpotify}
+          />
         </div>
       </div>
     </div>

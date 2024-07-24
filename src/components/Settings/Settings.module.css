@@ -20,7 +20,7 @@
   overflow-y: auto;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 0px;
 }
 
@@ -131,4 +131,13 @@
 
 .checkboxWrapper :focus:not(.focus-visible) {
   outline: 0;
+}
+
+input {
+  background: #17191e;
+  border: 1px solid #6e79d6;
+  border-radius: 5px;
+  color: #fff;
+  padding: 10px;
+  width: 100%;
 }

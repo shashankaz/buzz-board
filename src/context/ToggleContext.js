@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useState, useEffect } from "react";
 
 export const ToggleContext = createContext();
 
@@ -8,24 +8,33 @@ export const ToggleProvider = ({ children }) => {
     return savedCards ? JSON.parse(savedCards) : {};
   });
 
+  const [spotify, setSpotify] = useState(() => {
+    const savedSpotify = localStorage.getItem("spotify");
+    return savedSpotify
+      ? JSON.parse(savedSpotify)
+      : "https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M";
+  });
+
+  const setSpotifyUrl = (url) => {
+    const embeddedUrl = url.replace(
+      "https://open.spotify.com/playlist/",
+      "https://open.spotify.com/embed/playlist/"
+    );
+    setSpotify(embeddedUrl);
+  };
+
   const hideCard = (id) => {
-    setCards((prevCards) => {
-      const newCards = { ...prevCards, [id]: false };
-      localStorage.setItem("cards", JSON.stringify(newCards));
-      return newCards;
-    });
+    setCards((prevCards) => ({ ...prevCards, [id]: false }));
   };
 
   const showCard = (id) => {
-    setCards((prevCards) => {
-      const newCards = { ...prevCards, [id]: true };
-      localStorage.setItem("cards", JSON.stringify(newCards));
-      return newCards;
-    });
+    setCards((prevCards) => ({ ...prevCards, [id]: true }));
   };
 
   return (
-    <ToggleContext.Provider value={{ cards, hideCard, showCard }}>
+    <ToggleContext.Provider
+      value={{ cards, hideCard, showCard, spotify, setSpotifyUrl }}
+    >
       {children}
     </ToggleContext.Provider>
   );

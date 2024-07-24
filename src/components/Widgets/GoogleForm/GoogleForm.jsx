@@ -5,7 +5,7 @@ const GoogleForm = () => {
   return (
     <div className={styles.container}>
       <iframe
-        src="https://docs.google.com/forms/d/e/1FAIpQLSdKvZre5szO8h5Z7lvVGbB5vLknNTg9MRy95F8A2FqgQaHhDA/viewform?embedded=true"
+        src="https://forms.gle/tY9bFRBZPUXaB1gHA"
         className={styles.iframe}
         allowFullScreen
         title="Google Form"
